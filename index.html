@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+  <main class="container py-5">
+    <div class="mx-auto" style="max-width: 700px;">
+      <section class="card border-0 shadow-sm mb-4">
+        <div class="card-body p-4">
+          <label for="taskInput" class="form-label fw-semibold">New Task</label>
+          <div class="input-group">
+            <span class="input-group-text bg-white">
+              <i class="fa-solid fa-pen text-secondary"></i>
+            </span>
+            <input type="text" class="form-control" id="taskInput" placeholder="What do you want to do?" name="backend">
+            <button type="submit" class="btn btn-primary" id="addTaskBtn" onclick="main()">
+              <i class="fa-solid fa-plus me-1"></i>Add Task
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card border-0 shadow-sm">
+        <div class="card-header bg-white border-0 d-flex align-items-center justify-content-between px-4 pt-4">
+          <h2 class="h5 mb-0">
+            <i class="fa-solid fa-clipboard-list text-primary me-2"></i>My Tasks
+          </h2>
+          <span class="badge text-bg-primary rounded-pill" id="tasksCount">0 Tasks</span>
+        </div>
+
+        <div class="card-body p-4">
+          <ul class="list-group" id="tasksList"></ul>
+          <div class="text-center text-secondary py-4" id="emptyState">
+            <i class="fa-solid fa-clipboard-check fs-1 mb-3"></i>
+            <p class="mb-0">No tasks yet. Add your first task!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
+
